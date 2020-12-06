@@ -26,7 +26,6 @@ def validate_pass_pos(first, last, letter, pwd):
   else:
     return False
 
-
 def part1():
   pi = parse_input()
   count = 0
