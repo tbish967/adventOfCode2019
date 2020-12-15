@@ -33,17 +33,19 @@ def part2():
   pi = parse_input()
   ref_time = int(pi[0])
   departures = get_deps_keys(pi[1])
-  flag = False
-  min_start
+  multiplier = 1
+  time = 0
 
-  while not flag:
-    for dep in departures:
-      dep[]0
-  
-  #departures.sort(key=compare_ids, reverse=True)
   print(departures)
-  # start time must = dep[0] * N - dep[1] for each dep in departures
-  # where N is some interger, may be different for each
+  for i in range(len(departures)-1):
+    bus_id = departures[i+1][0]
+    offset = departures[i+1][1]
+    multiplier *= departures[i][0]
+
+    while (time + offset) % bus_id != 0:
+      time += multiplier
+  
+  return time
 
 def main():
   part1_res = part1()
